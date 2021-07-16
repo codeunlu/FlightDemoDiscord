@@ -16,11 +16,12 @@ public class Ucak {
 
     }
 
-    public Ucak(int id, int koltukSayisi, int businessKoltukSayisi, Map<Integer, Boolean> koltuklar, LocalDateTime kalkisZamani) {
+    public Ucak(int id, int koltukSayisi, int businessKoltukSayisi, Map<Integer, Boolean> koltuklar, LocalDateTime kalkisZamani,Map<Integer, String> koltukTuru,) {
         this.id = id;
         this.koltukSayisi = koltukSayisi;
         this.businessKoltukSayisi = businessKoltukSayisi;
         this.koltuklar = koltuklar;
+        this.koltukTuru = koltukTuru;
         this.kalkisZamani = kalkisZamani;
     }
 
