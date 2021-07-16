@@ -1,6 +1,9 @@
 package com.codeunlu;
 
 import com.codeunlu.model.Ucak;
+import com.codeunlu.service.abstracts.BaseRezervasyonService;
+import com.codeunlu.service.concretes.PegasusRezervasyon;
+import com.codeunlu.service.concretes.THYRezervasyon;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
@@ -27,11 +30,12 @@ public class Main {
                 koltukTuru.put(i,"Ekonomi");
             }
         }
+
         ucak.setKoltuklar(koltuklar);
         ucak.setKoltukTuru(koltukTuru);
 
-        System.out.println(ucak.toString());
-
+        BaseRezervasyonService rezervasyonService = new PegasusRezervasyon();
+        rezervasyonService.rezervasyonAl(ucak);
     }
 
 }
